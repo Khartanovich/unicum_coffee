@@ -41,12 +41,13 @@ fun ListCoffeeScreen(
     LazyVerticalGrid(
         columns = GridCells.Fixed(5),
         modifier = Modifier
+            .fillMaxSize()
             .background(Color.Black)
             .padding(topPadding)
-            .fillMaxSize(),
+            ,
         contentPadding = PaddingValues(8.dp),
-        horizontalArrangement = Arrangement.Center,
-        verticalArrangement = Arrangement.Center
+        horizontalArrangement = Arrangement.spacedBy(10.dp),
+        verticalArrangement = Arrangement.spacedBy(10.dp)
     ) {
         items(listData) { it ->
             ItemCoffeeData(

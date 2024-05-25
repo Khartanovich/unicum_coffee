@@ -5,6 +5,7 @@ import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
+import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
@@ -49,11 +50,11 @@ fun ItemCoffeeData(
         )
     Card(
         shape = RoundedCornerShape(6.dp),
-        modifier = Modifier.padding(10.dp)
+        modifier = Modifier
 
     ) {
         Column(
-            modifier = Modifier.background(colorResource(id = R.color.text_field_container_color)),
+            modifier = Modifier.background(colorResource(id = R.color.text_field_container_color)).fillMaxWidth(),
             verticalArrangement = Arrangement.Top,
             horizontalAlignment = Alignment.CenterHorizontally
         ) {
@@ -75,7 +76,7 @@ fun ItemCoffeeData(
             Row(
                 modifier = Modifier
                     .padding(top = 18.dp)
-                    .width(227.dp)
+                    .fillMaxWidth()
                     .height(42.dp)
                     .background(colorGradient),
                 verticalAlignment = Alignment.CenterVertically,
