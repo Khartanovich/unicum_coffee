@@ -8,18 +8,12 @@ import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Surface
-import androidx.compose.material3.Text
-import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.graphics.Color
-import androidx.compose.ui.tooling.preview.Preview
 import androidx.navigation.compose.rememberNavController
 import com.example.testunicum.navigation.CoffeeNavGraph
-import com.example.testunicum.ui.screens.ChooseScreen
 import com.example.testunicum.ui.screens.CoffeeTopAppBar
 import com.example.testunicum.ui.screens.CoffeeTopAppBarViewModel
 import com.example.testunicum.ui.screens.CoffeeViewModel
-import com.example.testunicum.ui.screens.ListCoffeeScreen
 import com.example.testunicum.ui.theme.TestUnicumTheme
 import dagger.hilt.android.AndroidEntryPoint
 
