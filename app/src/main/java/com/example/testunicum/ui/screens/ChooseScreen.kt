@@ -211,7 +211,13 @@ fun ChooseScreen(
                     colors = ButtonDefaults.buttonColors(
                         containerColor = colorResource(id = R.color.button_color)
                     ),
-                    shape = RoundedCornerShape(12.dp)
+                    shape = RoundedCornerShape(12.dp),
+                    enabled = if (
+                        coffeeModel.isFree != isFreeCoffee ||
+                        coffeeModel.name != nameCoffee ||
+                        coffeeModel.price.toString() != priceCoffee
+                    ) true
+                    else false
                 )
                 {
                     Text(text = stringResource(R.string.save))
