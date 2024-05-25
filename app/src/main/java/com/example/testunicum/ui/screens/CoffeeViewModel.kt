@@ -12,14 +12,14 @@ import kotlinx.coroutines.launch
 import javax.inject.Inject
 
 @HiltViewModel
-class CoffeeViewModel @Inject constructor (
+class CoffeeViewModel @Inject constructor(
     private val repository: SharedRepository
-): ViewModel() {
+) : ViewModel() {
 
     private var _coffeeModel = MutableStateFlow<CoffeeModel>(CoffeeModel())
     val coffeeModel = _coffeeModel.asStateFlow()
 
-    fun saveCoffeeModel(name: String, price: Int, numberGlasses: Int, isFree: Boolean){
+    fun saveCoffeeModel(name: String, price: Int, numberGlasses: Int, isFree: Boolean) {
         viewModelScope.launch(Dispatchers.IO) {
             repository.saveNameCoffee(name)
             repository.savePrice(price)
@@ -32,7 +32,7 @@ class CoffeeViewModel @Inject constructor (
         getCoffeeModel()
     }
 
-    fun getCoffeeModel(){
+    fun getCoffeeModel() {
         viewModelScope.launch(Dispatchers.IO) {
             _coffeeModel.value = coffeeModel.value.copy(
                 name = repository.getNameCoffee(),

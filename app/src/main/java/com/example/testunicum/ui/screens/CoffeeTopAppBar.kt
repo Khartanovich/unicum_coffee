@@ -15,6 +15,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.res.colorResource
 import androidx.compose.ui.res.painterResource
+import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
 import androidx.hilt.navigation.compose.hiltViewModel
 import androidx.navigation.NavHostController
@@ -32,13 +33,18 @@ fun CoffeeTopAppBar(
     val time by viewModel.time.collectAsState()
 
     TopAppBar(
-        title = { Text(text = "RUNERO Touch", color = colorResource(id = R.color.text_field_container_color)) },
+        title = {
+            Text(
+                text = stringResource(R.string.runero_touch),
+                color = colorResource(id = R.color.text_field_container_color)
+            )
+        },
         navigationIcon = {
             IconButton(onClick = {
-                navController.navigate(Routes.ChooseCoffee.route){
+                navController.navigate(Routes.ChooseCoffee.route) {
                     launchSingleTop = true
 
-                    popUpTo(Routes.ListCoffeeScreen.route){
+                    popUpTo(Routes.ListCoffeeScreen.route) {
                         inclusive = false
                         saveState = false
                     }
@@ -55,8 +61,7 @@ fun CoffeeTopAppBar(
         actions = {
             Text(text = time, color = TextColor)
             Spacer(modifier = Modifier.width(48.dp))
-            Text(text = degree.toString()+"°", color = TextColor)
+            Text(text = degree.toString() + "°", color = TextColor)
         },
-
     )
 }

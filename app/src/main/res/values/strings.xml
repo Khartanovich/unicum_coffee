@@ -1,3 +1,10 @@
 <resources>
     <string name="app_name">TestUnicum</string>
+    <string name="name">Наименование</string>
+    <string name="price">Цена</string>
+    <string name="rub">RUB</string>
+    <string name="buying_free">Продавать бесплатно</string>
+    <string name="save">Сохранить</string>
+    <string name="runero_touch">RUNERO Touch</string>
+    <string name="_0_33">0.33</string>
 </resources>

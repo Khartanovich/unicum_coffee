@@ -40,6 +40,7 @@ import androidx.compose.ui.graphics.SolidColor
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.res.colorResource
 import androidx.compose.ui.res.painterResource
+import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.text.input.KeyboardType
 import androidx.compose.ui.tooling.preview.Preview
@@ -103,24 +104,14 @@ fun ChooseScreen(
             horizontalArrangement = Arrangement.Center,
             verticalAlignment = Alignment.CenterVertically
         ) {
-//            ChooserScreenBlockChoose(
-//                name = "Coffee",
-//                price = 199,
-//                isFree = isFree,
-//                modifier = Modifier.weight(2f, false),
-//
-//            )
             Column(
                 modifier = Modifier
-                    .weight(2f, false)
-//                    .fillMaxWidth()
-//                    .background(color = Color.Black)
-                ,
+                    .weight(2f, false),
                 verticalArrangement = Arrangement.Top
             ) {
 
                 Text(
-                    text = "Наименование",
+                    text = stringResource(R.string.name),
                     fontSize = 16.sp,
                     color = TextColor
                 )
@@ -143,7 +134,7 @@ fun ChooseScreen(
                 )
 
                 Text(
-                    text = "Цена",
+                    text = stringResource(R.string.price),
                     fontSize = 16.sp,
                     color = TextColor,
                     modifier = Modifier.padding(top = 32.dp),
@@ -170,7 +161,7 @@ fun ChooseScreen(
                         .fillMaxWidth(),
                     textStyle = TextStyle(fontSize = 20.sp),
                     keyboardOptions = KeyboardOptions(keyboardType = KeyboardType.Number),
-                    trailingIcon = { Text(text = "RUB") },
+                    trailingIcon = { Text(text = stringResource(R.string.rub)) },
                     singleLine = true
                 )
 
@@ -188,7 +179,7 @@ fun ChooseScreen(
                     ) {
 
                     Text(
-                        text = "Продавать бесплатно",
+                        text = stringResource(R.string.buying_free),
                         fontSize = 14.sp,
                         color = TextColor,
                         modifier = Modifier.padding(start = 24.dp)
@@ -223,7 +214,7 @@ fun ChooseScreen(
                     shape = RoundedCornerShape(12.dp)
                 )
                 {
-                    Text(text = "Сохранить")
+                    Text(text = stringResource(R.string.save))
 
                 }
             }

@@ -18,6 +18,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Brush
 import androidx.compose.ui.res.colorResource
 import androidx.compose.ui.res.painterResource
+import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
@@ -81,13 +82,13 @@ fun ItemCoffeeData(
             ) {
                 if (isFree) {
                     Text(
-                        text = "0.33",
+                        text = stringResource(R.string._0_33),
                         fontSize = 16.sp,
                         color = TextColor
                     )
                 } else {
                     Text(
-                        text = "0.33",
+                        text = stringResource(R.string._0_33),
                         fontSize = 16.sp,
                         color = TextColor,
                         modifier = Modifier.padding(start = 4.dp)
@@ -102,9 +103,7 @@ fun ItemCoffeeData(
                 }
             }
         }
-
     }
-
 }
 
 @Preview(showSystemUi = true)

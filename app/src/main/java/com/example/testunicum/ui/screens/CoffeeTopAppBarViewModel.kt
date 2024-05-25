@@ -36,7 +36,7 @@ class CoffeeTopAppBarViewModel @Inject constructor() : ViewModel() {
         }
     }
 
-    private fun setTime(){
+    private fun setTime() {
         viewModelScope.launch(Dispatchers.IO) {
             while (start) {
                 _time.value = getTime()
@@ -46,7 +46,7 @@ class CoffeeTopAppBarViewModel @Inject constructor() : ViewModel() {
         }
     }
 
-    private fun getTime(): String{
+    private fun getTime(): String {
         val calendar = Calendar.getInstance()
         calendar.timeInMillis
         val formater = SimpleDateFormat("HH:mm", Locale.getDefault())
