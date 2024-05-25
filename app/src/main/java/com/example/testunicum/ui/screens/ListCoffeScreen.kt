@@ -1,6 +1,7 @@
 package com.example.testunicum.ui.screens
 
 import androidx.compose.foundation.background
+import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.PaddingValues
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.padding
@@ -43,7 +44,9 @@ fun ListCoffeeScreen(
             .background(Color.Black)
             .padding(topPadding)
             .fillMaxSize(),
-        contentPadding = PaddingValues(8.dp)
+        contentPadding = PaddingValues(8.dp),
+        horizontalArrangement = Arrangement.Center,
+        verticalArrangement = Arrangement.Center
     ) {
         items(listData) { it ->
             ItemCoffeeData(
